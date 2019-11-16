@@ -12,13 +12,41 @@
     "devDependencies": {
         "@babel/preset-react": "^7.0.0",
         "axios": "^0.19",
+        "babel-eslint": "^10.0.3",
         "cross-env": "^5.1",
+        "eslint": "^6.6.0",
+        "eslint-config-airbnb": "^18.0.1",
+        "eslint-config-prettier": "^6.5.0",
+        "eslint-loader": "^3.0.2",
+        "eslint-plugin-babel": "^5.3.0",
+        "eslint-plugin-flowtype": "^4.4.1",
+        "eslint-plugin-import": "^2.18.2",
+        "eslint-plugin-jest": "^23.0.4",
+        "eslint-plugin-jsx-a11y": "^6.2.3",
+        "eslint-plugin-prettier": "^3.1.1",
+        "eslint-plugin-react": "^7.16.0",
+        "eslint-plugin-react-hooks": "^2.3.0",
+        "husky": "^3.0.9",
         "laravel-mix": "^4.0.7",
+        "lint-staged": "^9.4.3",
         "lodash": "^4.17.13",
+        "prettier": "^1.19.1",
         "react": "^16.2.0",
         "react-dom": "^16.2.0",
         "resolve-url-loader": "^2.3.1",
         "sass": "^1.15.2",
         "sass-loader": "^7.1.0"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "resources/js/**/*.{js,jsx}": [
+            "yarn prettier --write",
+            "yarn eslint --fix",
+            "git add"
+        ]
     }
 }
