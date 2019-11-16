@@ -32,6 +32,7 @@ module.exports = {
     'prettier/prettier': 'error',
     'react/jsx-filename-extension': 'off',
     'react/prop-types': 'off',
+    'import/prefer-default-export': 0,
     'react/default-props-match-prop-types': 'off',
     'react/require-default-props': 'off',
     'flowtype/no-types-missing-file-annotation': 'off',
